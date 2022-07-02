@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-
+import { useState } from 'react';
 import {FiArrowLeft, FiArrowRight} from 'react-icons/fi';
+import { sliderItems } from '../data';
 
 const Container = styled.div`
     width: 100%;
-    height: 100vw;
+    height: 100vh;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -26,18 +27,22 @@ const Arrow = styled.div`
     right: ${props => props.direction === 'right' && "10px"};
     cursor: pointer;
     opacity: 0.5;
+    z-index: 2;
 `;
 
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
+    transform: translateX(${props => props.slideIndex * -100}vw);
+    transition: all 1.5s ease;
 `;
 
 const Slide = styled.div`
-    width: 100vw;
-    height: 100vw;
+    width: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
+    background-color: #${props => props.bg};
 `;
 
 const ImgContainer = styled.div`
@@ -74,46 +79,40 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
-  return (
+  
+    const [slideIndex, setSlideIndex] = useState(0);
+    const handleClick = (direction) => {
+        if(direction === 'left'){
+            setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2)
+        }else{
+            setSlideIndex(slideIndex < 2 ? slideIndex + 1: 0)
+        }
+    };
+
+    return (
+
     <Container>
-        <Arrow direction='left'>
+        <Arrow direction='left' onClick={() => handleClick('left')}>
             <FiArrowLeft/>
         </Arrow>
 
-        <Wrapper>
-            <Slide bg='f5fafd'>
-                <ImgContainer>
-                    <Image src='https://cdn.pixabay.com/photo/2020/10/23/16/50/woman-5679284_960_720.jpg' />
-                </ImgContainer>
-                <InfoContainer>
-                    <Title>SUMMER SALE</Title>
-                    <Desc>DON'T COMPROMISSE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Desc>
-                    <Button>SHOP NOW</Button>
-                </InfoContainer>
-            </Slide>
-            <Slide bg='fcf1ed'>
-                <ImgContainer>
-                    <Image src='https://cdn.pixabay.com/photo/2020/10/23/16/50/woman-5679284_960_720.jpg' />
-                </ImgContainer>
-                <InfoContainer>
-                    <Title>WINTER SALE</Title>
-                    <Desc>DON'T COMPROMISSE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Desc>
-                    <Button>SHOP NOW</Button>
-                </InfoContainer>
-            </Slide>
-            <Slide bg='fbf0f4'>
-                <ImgContainer>
-                    <Image src='https://cdn.pixabay.com/photo/2020/10/23/16/50/woman-5679284_960_720.jpg' />
-                </ImgContainer>
-                <InfoContainer>
-                    <Title>POPULAR SALE</Title>
-                    <Desc>DON'T COMPROMISSE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</Desc>
-                    <Button>SHOP NOW</Button>
-                </InfoContainer>
-            </Slide>
+        <Wrapper slideIndex={slideIndex}>
+            {sliderItems.map(item => {
+                return(
+                    <Slide bg={item.bg}>
+                        <ImgContainer>
+                            <Image src={item.img} />
+                        </ImgContainer>
+                        <InfoContainer>
+                            <Title>{item.title}</Title>
+                            <Desc>{item.desc}</Desc>
+                            <Button>SHOP NOW</Button>
+                        </InfoContainer>
+                    </Slide>
+                )})}
         </Wrapper>
 
-        <Arrow direction='right'>
+        <Arrow direction='right' onClick={() => handleClick('right')}>
             <FiArrowRight />
         </Arrow>
     </Container>
