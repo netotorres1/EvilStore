@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
     height: 60vh;
-    background-color: #fcf5f5;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,6 +12,7 @@ const Container = styled.div`
 `;
 const Title = styled.h1`
     font-size: 70px;
+    font-weight: 300;   
     margin-bottom: 20px;
 `;
 const Description = styled.div`
@@ -25,7 +26,7 @@ const InputContainer = styled.div`
     background-color: white;
     display: flex;
     justify-content: space-between;
-    border: 1 solid lightgray;
+    border-bottom: 3px solid black;
 `;
 const Input = styled.input`
     border: none;
@@ -35,19 +36,20 @@ const Input = styled.input`
 const Button = styled.button`
     flex: 1;
     border: none;
-    background-color: teal;
+    background-color: black;
     color: white;
+
 `;
 
 const Newsletter = () => {
   return (
     <Container>
-        <Title>Newsletter</Title>
-        <Description>Get timely updates from your favorite products.</Description>
+        <Title>receba as novidades</Title>
+        <Description>Deixe seu e-mail e receba as novidades antes de todos!</Description>
         <InputContainer>
-            <Input placeholder='Your email' />
+            <Input placeholder='Seu e-mail' />
             <Button>
-                <FiSend/>
+                <FiSend size={20}/>
             </Button>
         </InputContainer>
     </Container>

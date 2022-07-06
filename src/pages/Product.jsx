@@ -84,7 +84,7 @@ const Amount = styled.span`
     width: 30px;
     height: 30px;
     border-radius: 10px;
-    border: 1px solid teal;
+    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +92,8 @@ const Amount = styled.span`
 `;
 const Button = styled.button`
     padding: 15px;
-    border: 2px solid teal;
+    border: 2px solid black;
+    font-weight: bold;
     background-color: white;
     cursor: pointer;
     font-weight: 500;
@@ -110,13 +111,13 @@ const Product = () => {
         <Announcement/>
         <Wrapper>
             <ImgContainer>
-                <Image src='https://static3.tcdn.com.br/img/img_prod/322139/camiseta_feminina_magali_50_anos_high_score_1457_2_20200214105419.jpg' />
+                <Image src='https://keydesign.vteximg.com.br/arquivos/ids/196162-638-638/Camiseta-Basica-Com-Bolso---Branca-638-638.jpg?v=637172072326670000' />
 
             </ImgContainer>
             <InfoContainer>
                 <Title>Denim Jumpsuit</Title>
                 <Desc>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Desc>
-                <Price>$ 20</Price>
+                <Price>R$ 20</Price>
                 <FilterContainer>
                     <Filter>
                         <FilterTitle>
@@ -131,11 +132,10 @@ const Product = () => {
                             Size
                         </FilterTitle>
                         <FilterSize>
-                            <FilterSizeOption>XS</FilterSizeOption>
-                            <FilterSizeOption>S</FilterSizeOption>
+                            <FilterSizeOption>P</FilterSizeOption>
                             <FilterSizeOption>M</FilterSizeOption>
-                            <FilterSizeOption>L</FilterSizeOption>
-                            <FilterSizeOption>XL</FilterSizeOption>
+                            <FilterSizeOption>G</FilterSizeOption>
+                            <FilterSizeOption>GG</FilterSizeOption>
                         </FilterSize>
                     </Filter>
                 </FilterContainer>
@@ -145,7 +145,7 @@ const Product = () => {
                         <Amount>1</Amount>
                         <FiArrowDown/>
                     </AmountContainer>
-                    <Button>Add to cart</Button>
+                    <Button>adicionar ao carrinho</Button>
                 </AddContainer>
             </InfoContainer>
         </Wrapper>

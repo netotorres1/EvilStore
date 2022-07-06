@@ -33,7 +33,7 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    transform: translateX(${props => props.slideIndex * -100}vw);
+    transform: translateX(${props => props.slideIndex * -100}vh);
     transition: all 1.5s ease;
 `;
 
@@ -47,7 +47,6 @@ const Slide = styled.div`
 
 const ImgContainer = styled.div`
     height: 100%;
-
     flex: 1;
 `;
 
@@ -56,6 +55,7 @@ const Image = styled.img`
 `;
 
 const InfoContainer = styled.div`
+    margin: 30px;
     flex: 1;
 `;
 
@@ -66,14 +66,16 @@ const Title = styled.h1`
 
 const Desc= styled.p`
     margin: 50px 0px;
-    font-size: 20px;    
+    font-size: 15px;    
     font-weight: 500;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 `;
 
 const Button = styled.button`
     padding 10px;
     font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
     background-color: transparent;
     cursor: pointer;
 `;
@@ -106,7 +108,7 @@ const Slider = () => {
                         <InfoContainer>
                             <Title>{item.title}</Title>
                             <Desc>{item.desc}</Desc>
-                            <Button>SHOP NOW</Button>
+                            <Button>Confira</Button>
                         </InfoContainer>
                     </Slide>
                 )})}

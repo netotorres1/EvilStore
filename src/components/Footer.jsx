@@ -89,30 +89,26 @@ const Footer = () => {
             </SocialContainer>
         </Left>
         <Center>
-            <Title>Useful Links</Title>
+            <Title>Links úteis</Title>
             <List>
                 <ListItem>Home</ListItem>
                 <ListItem>Cart</ListItem>
                 <ListItem>Man Fashion</ListItem>
-                <ListItem>Woman Fashion</ListItem>
-                <ListItem>Acessories</ListItem>
                 <ListItem>My Account</ListItem>
                 <ListItem>Order Tracking</ListItem>
-                <ListItem>Wishlist</ListItem>
-                <ListItem>Wishlist</ListItem>
                 <ListItem>Terms</ListItem>
             </List>
         </Center>
         <Right>
-            <Title>Contact</Title>
+            <Title>Contato</Title>
             <ContactItem>
-              <FiMap style={{marginRight: '10px'}} />  622 Dixie Path, South Tobinchester 98336
+              <FiMap style={{marginRight: '10px'}} />  Rua: X, Bairro Y, nº Z.
             </ContactItem>
             <ContactItem>
               <FiPhone style={{marginRight: '10px'}} />  +1 234 56 789
             </ContactItem>
             <ContactItem>
-               <FiMail style={{marginRight: '10px'}} /> contact@lama.dev
+               <FiMail style={{marginRight: '10px'}} /> torresneto47@gmail.com
             </ContactItem>
         </Right>
     </Container>

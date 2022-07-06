@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import { FiShoppingCart ,FiSearch} from 'react-icons/fi';
 
@@ -75,14 +76,14 @@ const Navbar = () => {
                 </SearchContainer>
             </Left>
             <Center>
-                <Logo>EVIL</Logo>
+                <Logo><Link to={'/'}>EVIL</Link></Logo>
             </Center>
             <Right>
                 <MenuItem>
-                    REGISTER
+                <Link to={'/register'}>Crie uma conta</Link> 
                 </MenuItem>
                 <MenuItem>
-                    SIGN IN 
+                <Link to={'/login'}>Entrar </Link> 
                 </MenuItem>
                 <MenuItem>
                     <FiShoppingCart size={25}/>

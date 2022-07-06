@@ -31,12 +31,17 @@ const Title = styled.h1`
 `;
 
 const Button = styled.button`
-  border: none;
-  padding: 10px;
-  background-color: white;
-  color: gray;
+  border: 1px solid white;
+  padding: 15px;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
   cursor: pointer;
   font-weight: 600;
+
+  &:hover{
+    background-color: rgba(255,255,255, 0.2);
+  }
 `;
 
 function CategoryItem({item}) {
@@ -45,7 +50,7 @@ function CategoryItem({item}) {
         <Image src={item.img} />
         <Info>
             <Title>{item.title}</Title>
-            <Button>SHOP NOW</Button>
+            <Button>COMPRE AGORA</Button>
         </Info>
     </Container>
   )

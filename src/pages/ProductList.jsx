@@ -41,35 +41,34 @@ const ProductList = () => {
     <Container>
         <Navbar />
         <Announcement />
-        <Title>Dresses</Title>
+        <Title>PEÇAS</Title>
         <FilterContainer>
             <Filter>
                 <FilterText>Filter Products:</FilterText>
                 <Select>
-                    <Option disabled selected>Color</Option>
-                    <Option>White</Option>
-                    <Option>Black</Option>
-                    <Option>Red</Option>
-                    <Option>Blue</Option>
-                    <Option>Yellow</Option>
-                    <Option>Green</Option>
+                    <Option disabled selected>Cor</Option>
+                    <Option>Branco</Option>
+                    <Option>Preto</Option>
+                    <Option>Vermelho</Option>
+                    <Option>Azul</Option>
+                    <Option>Amarelo</Option>
+                    <Option>Verde</Option>
                 </Select>
                 <Select>
-                    <Option disabled selected>Size</Option>
-                    <Option>GG</Option>
+                    <Option disabled selected>Tamanho</Option>
+                    <Option>PP</Option>
                     <Option>P</Option>
                     <Option>M</Option>
                     <Option>G</Option>
-                    <Option>X</Option>
-                    <Option>XG</Option>
+                    <Option>GG</Option>
                 </Select>
             </Filter>
             <Filter>
-                <FilterText>Sort Products:</FilterText>
+                <FilterText>Selecionar Produtos:</FilterText>
                 <Select>
-                    <Option selected>Newest</Option>
-                    <Option>Price (asc)</Option>
-                    <Option>Price (desc)</Option>
+                    <Option selected>Mais novos</Option>
+                    <Option>Preço (CRESCENTE)</Option>
+                    <Option>Preço (DECRESCENTE)</Option>
                 </Select>
             </Filter>
         </FilterContainer>

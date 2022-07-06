@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FiShoppingCart, FiSearch, FiHeart} from 'react-icons/fi';
+import { Link } from "react-router-dom";
 
 const Info = styled.div`
     opacity: 0;
@@ -68,10 +69,10 @@ const Product = ({item}) => {
         <Image src={item.img} />
         <Info>
             <Icon>
-                <FiShoppingCart />
+               <Link to={'/productlist'}><FiShoppingCart /></Link> 
             </Icon>
             <Icon>
-                <FiSearch />
+            <Link to={'/product'}><FiSearch /></Link> 
             </Icon>
             <Icon>
                 <FiHeart />
