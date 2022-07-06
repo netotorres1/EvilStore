@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import Announcement from '../components/Annoucement'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import { Link } from 'react-router-dom'
+import {mobile} from '../responsive';
 
 const Container = styled.div`
 
@@ -11,6 +13,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
     padding: 20px;
+    ${mobile({padding: '10px'})};
 `;
 
 const Top = styled.h1`
@@ -29,7 +32,9 @@ const TopButton = styled.button`
     color: ${(props) => props.type === 'filled' && 'white'};
 `;
 
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+    ${mobile({display: 'none'})};
+`;
 const TopText = styled.span`
     text-decoration: underline;
     cursor: pointer;
@@ -44,6 +49,7 @@ const Title = styled.div`
 const Bottom = styled.div`
     display: flex;
     justify-content: space-between;
+    ${mobile({flexDirection: 'column'})};
 `;
 
 const Info = styled.div`
@@ -53,6 +59,7 @@ const Info = styled.div`
 const Product = styled.div`
     display: flex;
     justify-content: space-between;
+    ${mobile({flexDirection: 'column'})};
 `;
 
 const ProductDetail = styled.div`
@@ -95,6 +102,7 @@ const PriceDetail = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    ${mobile({flexDirection: 'column'})};
 `;
 
 const ProductAmountContainer = styled.div`
@@ -106,11 +114,13 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
     font-size: 24px;
     margin: 5px;
+    ${mobile({margin: '5px 15px'})};
 `;
 
 const ProductPrice = styled.div`
     font-size: 30px;
     font-weight: 200;
+    ${mobile({marginBottom: '20px'})};
 `;
 
 const Hr = styled.hr`
@@ -154,7 +164,7 @@ const Cart = () => {
         <Wrapper>
             <Title>YOUR BAG</Title>
             <Top>
-                <TopButton>CONTINUE SHOPPING</TopButton>
+                <TopButton><Link to={'/'}>Continuar Comprando</Link></TopButton>
                 <TopTexts>
                     <TopText>Shopping Bag(2)</TopText>
                     <TopText>Your Wishlist (0)</TopText>
@@ -165,7 +175,7 @@ const Cart = () => {
                 <Info>
                     <Product>
                         <ProductDetail>
-                            <Image src='https://static3.tcdn.com.br/img/img_prod/322139/camiseta_feminina_magali_50_anos_high_score_1457_2_20200214105419.jpg' />
+                            <Image src='https://keydesign.vteximg.com.br/arquivos/ids/196162-638-638/Camiseta-Basica-Com-Bolso---Branca-638-638.jpg?v=637172072326670000' />
                             <Details>
                                 <ProductName><b>Product:</b>JESSIE THUNDER SHOES</ProductName>
                                 <ProductId><b>ID:</b> 123456789</ProductId>
@@ -187,7 +197,7 @@ const Cart = () => {
                     <Hr/>
                     <Product>
                         <ProductDetail>
-                            <Image src='https://static3.tcdn.com.br/img/img_prod/322139/camiseta_feminina_magali_50_anos_high_score_1457_2_20200214105419.jpg' />
+                            <Image src='https://images.tcdn.com.br/img/img_prod/497460/camiseta_o_grito_282_3_20190314163301.jpeg' />
                             <Details>
                                 <ProductName><b>Product:</b>JESSIE THUNDER SHOES</ProductName>
                                 <ProductId><b>ID:</b> 123456789</ProductId>

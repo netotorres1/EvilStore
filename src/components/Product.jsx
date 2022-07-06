@@ -69,10 +69,10 @@ const Product = ({item}) => {
         <Image src={item.img} />
         <Info>
             <Icon>
-               <Link to={'/productlist'}><FiShoppingCart /></Link> 
+               <Link to={'/product'}><FiShoppingCart /></Link> 
             </Icon>
             <Icon>
-            <Link to={'/product'}><FiSearch /></Link> 
+            <Link to={'/productlist'}><FiSearch /></Link> 
             </Icon>
             <Icon>
                 <FiHeart />

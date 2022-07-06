@@ -1,9 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import {mobile} from '../responsive';
 import { FiFacebook, FiInstagram, FiTwitter, FiMap, FiPhone, FiMail} from 'react-icons/fi';
 
 const Container = styled.div`
     display: flex;
+    ${mobile({flexDirection: 'column'})};
 `;
 
 const Left = styled.div`
@@ -62,6 +64,7 @@ const ListItem = styled.li`
 const Center = styled.div`
     flex: 1;
     padding: 20px;
+    ${mobile({display: 'none'})};
 `;
 
 const ContactItem = styled.div`
